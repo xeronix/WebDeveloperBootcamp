@@ -1,0 +1,14 @@
+<h1><%=data["Title"]%></h1>
+
+<ul>
+    <% Object.keys(data).forEach(function(key) { %>
+        <% if (key === "Poster") { %>
+            <img src="<%=data[key]%>">
+        <% } else if (typeof data[key] === "string") { %>
+            <li><strong><%=key%></strong>: <%=data[key]%></li>
+        <% } %>
+<% }); %>
+</ul>
+
+
+<a href="/" >Search Again!</a>
